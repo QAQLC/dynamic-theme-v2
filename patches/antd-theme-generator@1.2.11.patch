@@ -1,0 +1,15 @@
+diff --git a/index.js b/index.js
+index 2b959680e9316b2d7bf79e99194857f42c892664..98313e9114ba196a9d0a750d970c3e2e8e03cfc8 100644
+--- a/index.js
++++ b/index.js
+@@ -358,8 +358,8 @@ async function compileAllLessFilesToCss(
+           }
+         );
+       });
+-      // fileContent = `@import "${varPath}";\n${fileContent}`;
+-      fileContent = `@import "~antd/lib/style/themes/default.less";\n@import "${varPath}";\n${fileContent}`;
++      fileContent = `@import "${varPath}";\n${fileContent}`;
++      // fileContent = `@import "~antd/lib/style/themes/default.less";\n@import "${varPath}";\n${fileContent}`;
+       return less
+         .render(fileContent, {
+           paths: [antdStylesDir].concat(stylesDir),

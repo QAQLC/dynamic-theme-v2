@@ -1,17 +1,33 @@
 <script setup>
+import { useDark, useToggle } from '@vueuse/core'
+import { watch } from 'vue'
+const isDark = useDark()
 
+const toggleDark = useToggle(isDark)
+
+watch(isDark, value => {
+    if (value) {
+        window.less.modifyVars({
+            '@primary-color': 'cyan',
+        })
+    } else {
+        window.less.modifyVars({
+            '@primary-color': 'pink',
+        })
+    }
+})
 </script>
 
 <template>
-  <main>
-
-    <a-button type="primary">Primary Button</a-button>
-  </main>
+    <main>
+        <a-button type="primary">Primary Button</a-button>
+        <button @click="toggleDark()">切换</button>
+    </main>
 </template>
 
 <style scoped>
 main {
-  padding-top: 20px;
+    padding-top: 20px;
 }
 
 /* header {
