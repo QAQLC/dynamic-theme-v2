@@ -1,0 +1,19 @@
+{
+    "name": "vue-project",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "node color.js && vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "ant-design-vue": "2.2.8",
+        "antd-theme-generator": "^1.2.11",
+        "vue": "^3.3.2"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^4.2.3",
+        "vite": "^4.3.5"
+    }
+}
